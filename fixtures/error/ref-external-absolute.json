@@ -1,0 +1,13 @@
+{
+  "tools": [
+    {
+      "name": "external_ref",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "payload": { "$ref": "https://example.com/schemas/payload.json" }
+        }
+      }
+    }
+  ]
+}

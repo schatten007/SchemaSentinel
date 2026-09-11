@@ -1,0 +1,39 @@
+{
+  "tools": [
+    {
+      "name": "weather",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "$ref": "#/$defs/Location" }
+        },
+        "required": ["location"]
+      }
+    },
+    {
+      "name": "echo",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "registry",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {
+          "Entry": { "type": "string" }
+        }
+      }
+    },
+    {
+      "name": "route",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "from": { "$ref": "#/$defs/Stop" },
+          "to": { "$ref": "#/$defs/Stop" }
+        }
+      }
+    }
+  ]
+}

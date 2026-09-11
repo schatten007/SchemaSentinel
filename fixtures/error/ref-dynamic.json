@@ -1,0 +1,23 @@
+{
+  "tools": [
+    {
+      "name": "dynamic_ref",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {
+          "Node": {
+            "$dynamicAnchor": "Node",
+            "type": "object",
+            "properties": {
+              "next": { "$dynamicRef": "#Node" }
+            }
+          }
+        },
+        "properties": {
+          "root": { "$ref": "#/$defs/Node" }
+        },
+        "required": ["root"]
+      }
+    }
+  ]
+}

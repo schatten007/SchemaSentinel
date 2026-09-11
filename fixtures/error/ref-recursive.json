@@ -1,0 +1,16 @@
+{
+  "tools": [
+    {
+      "name": "recursive_ref",
+      "inputSchema": {
+        "$recursiveAnchor": true,
+        "type": "object",
+        "properties": {
+          "child": { "$recursiveRef": "#" },
+          "label": { "type": "string" }
+        },
+        "required": ["label"]
+      }
+    }
+  ]
+}

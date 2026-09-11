@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "legacy",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-06/schema#",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

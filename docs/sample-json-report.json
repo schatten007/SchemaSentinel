@@ -1,0 +1,33 @@
+{
+  "findings": [
+    {
+      "evidence": "n8n#25964",
+      "id": "SS-REF-001",
+      "message": "$ref '#/$defs/Location' does not resolve within the document.",
+      "pointer": "/tools/0/inputSchema/properties/location/$ref",
+      "remediation": "Restore the $defs block or inline the referenced subschema.",
+      "rule": "ref.dangling",
+      "severity": "error",
+      "toolIndex": 0,
+      "toolName": "get_weather"
+    }
+  ],
+  "input": {
+    "dialect": "2020-12",
+    "partialPage": false,
+    "path": "fixtures/defect/ref-dangling-defs-removed.json",
+    "toolCount": 1
+  },
+  "reportVersion": 1,
+  "summary": {
+    "byFingerprint": {
+      "n8n#25964": 1,
+      "n8n#33864": 0
+    },
+    "findingCount": 1
+  },
+  "tool": {
+    "name": "schema-sentinel",
+    "version": "0.1.0"
+  }
+}

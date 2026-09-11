@@ -1,0 +1,31 @@
+schema-sentinel 0.1.0
+input: fixtures/defect/mixed-multi-tool.json
+dialect: 2020-12
+tools: 4
+
+SS-REF-001  error  n8n#25964  tool "weather"
+  pointer: /tools/0/inputSchema/properties/location/$ref
+  message: $ref '#/$defs/Location' does not resolve within the document.
+  fix:     Restore the $defs block or inline the referenced subschema.
+
+SS-TYPE-001  error  n8n#33864  tool "echo"
+  pointer: /tools/1/inputSchema
+  message: inputSchema carries no constraining keyword, so the declared parameter set is missing.
+  fix:     Restore the declared parameter set, or declare the empty parameter set explicitly with "properties": {} or "additionalProperties": false.
+
+SS-REF-002  error  n8n#25964  tool "registry"
+  pointer: /tools/2/inputSchema/$defs
+  message: $defs is populated but no $ref occurs anywhere in this tool's inputSchema.
+  fix:     Restore the $ref sites that referenced $defs, or remove the unused container.
+
+SS-REF-001  error  n8n#25964  tool "route"
+  pointer: /tools/3/inputSchema/properties/from/$ref
+  message: $ref '#/$defs/Stop' does not resolve within the document.
+  fix:     Restore the $defs block or inline the referenced subschema.
+
+SS-REF-001  error  n8n#25964  tool "route"
+  pointer: /tools/3/inputSchema/properties/to/$ref
+  message: $ref '#/$defs/Stop' does not resolve within the document.
+  fix:     Restore the $defs block or inline the referenced subschema.
+
+findings: 5 (n8n#25964: 4, n8n#33864: 1)

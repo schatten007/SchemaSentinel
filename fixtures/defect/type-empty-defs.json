@@ -1,0 +1,11 @@
+{
+  "tools": [
+    {
+      "name": "list_regions",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {}
+      }
+    }
+  ]
+}

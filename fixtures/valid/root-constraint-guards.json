@@ -1,0 +1,55 @@
+{
+  "tools": [
+    {
+      "name": "guard_required",
+      "inputSchema": {
+        "type": "object",
+        "required": ["a"]
+      }
+    },
+    {
+      "name": "guard_min_properties",
+      "inputSchema": {
+        "type": "object",
+        "minProperties": 1
+      }
+    },
+    {
+      "name": "guard_max_properties",
+      "inputSchema": {
+        "type": "object",
+        "maxProperties": 3
+      }
+    },
+    {
+      "name": "guard_property_names",
+      "inputSchema": {
+        "type": "object",
+        "propertyNames": { "pattern": "^[a-z_]+$" }
+      }
+    },
+    {
+      "name": "guard_dependent_required",
+      "inputSchema": {
+        "type": "object",
+        "dependentRequired": { "a": ["b"] }
+      }
+    },
+    {
+      "name": "guard_dependent_schemas",
+      "inputSchema": {
+        "type": "object",
+        "dependentSchemas": {
+          "a": { "properties": { "b": { "type": "string" } } }
+        }
+      }
+    },
+    {
+      "name": "guard_unevaluated_properties",
+      "inputSchema": {
+        "type": "object",
+        "unevaluatedProperties": false
+      }
+    }
+  ]
+}

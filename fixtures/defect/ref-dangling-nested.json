@@ -1,0 +1,18 @@
+{
+  "tools": [
+    {
+      "name": "create_ticket",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "assignees": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/User" }
+          }
+        },
+        "required": ["title"]
+      }
+    }
+  ]
+}

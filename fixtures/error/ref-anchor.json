@@ -1,0 +1,20 @@
+{
+  "tools": [
+    {
+      "name": "anchored_ref",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {
+          "Location": {
+            "$anchor": "Location",
+            "type": "string"
+          }
+        },
+        "properties": {
+          "location": { "$ref": "#Location" }
+        },
+        "required": ["location"]
+      }
+    }
+  ]
+}

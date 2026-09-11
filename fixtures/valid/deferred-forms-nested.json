@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "open_config",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "config": { "type": "object" },
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}

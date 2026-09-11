@@ -1,0 +1,11 @@
+{
+  "tools": [
+    {
+      "name": "server_info",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

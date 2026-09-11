@@ -1,0 +1,11 @@
+{
+  "tools": [
+    {
+      "name": "list_timezones",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false
+      }
+    }
+  ]
+}

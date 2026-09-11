@@ -1,0 +1,15 @@
+{
+  "tools": [
+    {
+      "name": "get_weather",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "type": "string" },
+          "units": { "enum": ["celsius", "fahrenheit"] }
+        },
+        "required": ["location"]
+      }
+    }
+  ]
+}

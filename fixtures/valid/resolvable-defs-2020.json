@@ -1,0 +1,46 @@
+{
+  "tools": [
+    {
+      "name": "get_weather",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {
+          "Location": {
+            "type": "object",
+            "properties": {
+              "city": { "type": "string" }
+            },
+            "required": ["city"]
+          }
+        },
+        "properties": {
+          "location": { "$ref": "#/$defs/Location" }
+        },
+        "required": ["location"]
+      }
+    },
+    {
+      "name": "ingest_document",
+      "inputSchema": {
+        "type": "object",
+        "$defs": {
+          "Document": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" }
+            },
+            "required": ["id"]
+          }
+        },
+        "properties": {
+          "payload": {
+            "type": "string",
+            "contentMediaType": "application/json",
+            "contentSchema": { "$ref": "#/$defs/Document" }
+          }
+        },
+        "required": ["payload"]
+      }
+    }
+  ]
+}

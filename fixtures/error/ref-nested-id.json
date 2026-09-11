@@ -1,0 +1,25 @@
+{
+  "tools": [
+    {
+      "name": "nested_id",
+      "inputSchema": {
+        "$id": "https://example.com/tools/nested-id",
+        "type": "object",
+        "$defs": {
+          "Location": {
+            "$id": "https://example.com/tools/location",
+            "type": "object",
+            "properties": {
+              "city": { "type": "string" }
+            },
+            "required": ["city"]
+          }
+        },
+        "properties": {
+          "location": { "$ref": "#/$defs/Location" }
+        },
+        "required": ["location"]
+      }
+    }
+  ]
+}

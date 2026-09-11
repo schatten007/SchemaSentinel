@@ -1,0 +1,276 @@
+{
+  "fixtures": [
+    {
+      "evidence": ["n8n#25964", "n8n#33864"],
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/location/$ref",
+          "toolName": "weather"
+        },
+        {
+          "id": "SS-TYPE-001",
+          "pointer": "/tools/1/inputSchema",
+          "toolName": "echo"
+        },
+        {
+          "id": "SS-REF-002",
+          "pointer": "/tools/2/inputSchema/$defs",
+          "toolName": "registry"
+        },
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/3/inputSchema/properties/from/$ref",
+          "toolName": "route"
+        },
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/3/inputSchema/properties/to/$ref",
+          "toolName": "route"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/mixed-multi-tool.json"
+    },
+    {
+      "evidence": "n8n#25964",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/payload/contentSchema/$ref",
+          "toolName": "ingest_document"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/ref-dangling-content-schema.json"
+    },
+    {
+      "evidence": "n8n#25964",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/location/$ref",
+          "toolName": "get_weather"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/ref-dangling-defs-removed.json"
+    },
+    {
+      "evidence": "n8n#25964",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/destination/$ref",
+          "toolName": "route_request"
+        },
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/origin/$ref",
+          "toolName": "route_request"
+        },
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/waypoints/items/$ref",
+          "toolName": "route_request"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/ref-dangling-multiple.json"
+    },
+    {
+      "evidence": "n8n#25964",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-001",
+          "pointer": "/tools/0/inputSchema/properties/assignees/items/$ref",
+          "toolName": "create_ticket"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/ref-dangling-nested.json"
+    },
+    {
+      "evidence": "n8n#25964",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-REF-002",
+          "pointer": "/tools/0/inputSchema/$defs",
+          "toolName": "get_status"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/ref-orphan-defs.json"
+    },
+    {
+      "evidence": "n8n#33864",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-TYPE-001",
+          "pointer": "/tools/0/inputSchema",
+          "toolName": "list_regions"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/type-empty-defs.json"
+    },
+    {
+      "evidence": "n8n#33864",
+      "expectedExitCode": 1,
+      "expectedFindings": [
+        {
+          "id": "SS-TYPE-001",
+          "pointer": "/tools/0/inputSchema",
+          "toolName": "bare_object"
+        },
+        {
+          "id": "SS-TYPE-001",
+          "pointer": "/tools/1/inputSchema",
+          "toolName": "described_object"
+        }
+      ],
+      "kind": "defect",
+      "path": "defect/type-root-collapsed.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-DIALECT",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/dialect-2019-09.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-DIALECT",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/dialect-draft-07.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-DIALECT",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/dialect-unknown.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-SCHEMA-TYPE",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/inputschema-not-object.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-PARSE",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/malformed.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-SHAPE",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/not-tools-list.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-UNSUPPORTED",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-anchor.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-UNSUPPORTED",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-dynamic.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-UNSUPPORTED",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-empty.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-EXTERNAL",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-external-absolute.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-EXTERNAL",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-external-relative.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-UNSUPPORTED",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-nested-id.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-REF-UNSUPPORTED",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/ref-recursive.json"
+    },
+    {
+      "expectedErrorCode": "SS-E-SCHEMA-INVALID",
+      "expectedExitCode": 2,
+      "kind": "error",
+      "path": "error/schema-invalid-tuple-items.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/deferred-forms-array.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/deferred-forms-nested.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/empty-properties.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/minimal-typed.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/parameterless-additional-false.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/resolvable-defs-2020.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/resolvable-legacy-definitions.json"
+    },
+    {
+      "expectedExitCode": 0,
+      "expectedFindings": [],
+      "kind": "valid",
+      "path": "valid/root-constraint-guards.json"
+    }
+  ],
+  "manifestVersion": 1
+}

@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "empty_ref",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "self": { "$ref": "" }
+        },
+        "required": ["self"]
+      }
+    }
+  ]
+}

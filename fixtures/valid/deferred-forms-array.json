@@ -1,0 +1,17 @@
+{
+  "tools": [
+    {
+      "name": "collect_tags",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tags": { "type": "array" },
+          "matrix": {
+            "type": "array",
+            "items": { "type": "array" }
+          }
+        }
+      }
+    }
+  ]
+}

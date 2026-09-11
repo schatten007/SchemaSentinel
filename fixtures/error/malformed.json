@@ -1,0 +1,1 @@
+{ "tools": [ { "name": "broken", "inputSchema": { "type": "object" } }

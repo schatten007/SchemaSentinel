@@ -1,0 +1,19 @@
+{
+  "tools": [
+    {
+      "name": "route_request",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "origin": { "$ref": "#/$defs/Point" },
+          "destination": { "$ref": "#/$defs/Point" },
+          "waypoints": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/Waypoint" }
+          }
+        },
+        "required": ["origin", "destination"]
+      }
+    }
+  ]
+}

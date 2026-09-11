@@ -1,0 +1,17 @@
+{
+  "tools": [
+    {
+      "name": "tuple_items",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pair": {
+            "type": "array",
+            "items": [{ "type": "string" }, { "type": "number" }]
+          }
+        },
+        "required": ["pair"]
+      }
+    }
+  ]
+}

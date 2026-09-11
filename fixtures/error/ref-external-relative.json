@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "shared_ref",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "$ref": "shared.json#/$defs/Location" }
+        },
+        "required": ["location"]
+      }
+    }
+  ]
+}

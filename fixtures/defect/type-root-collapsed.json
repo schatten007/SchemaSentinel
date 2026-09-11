@@ -1,0 +1,18 @@
+{
+  "tools": [
+    {
+      "name": "bare_object",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "described_object",
+      "inputSchema": {
+        "type": "object",
+        "title": "Collapsed parameters",
+        "description": "Only documentation survived the conversion."
+      }
+    }
+  ]
+}

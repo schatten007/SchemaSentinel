@@ -1,0 +1,25 @@
+{
+  "tools": [
+    {
+      "name": "book_flight",
+      "inputSchema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "definitions": {
+          "Passenger": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" }
+            },
+            "required": ["name"]
+          }
+        },
+        "properties": {
+          "passenger": { "$ref": "#/definitions/Passenger" },
+          "seat": { "type": "string" }
+        },
+        "required": ["passenger"]
+      }
+    }
+  ]
+}

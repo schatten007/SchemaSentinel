@@ -1,0 +1,15 @@
+{
+  "tools": [
+    {
+      "name": "get_weather",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "$ref": "#/$defs/Location" },
+          "units": { "type": "string" }
+        },
+        "required": ["location"]
+      }
+    }
+  ]
+}
