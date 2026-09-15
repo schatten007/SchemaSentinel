@@ -2,7 +2,7 @@
 
 > **Tier:** Small (Project 1 of 4)
 > **One-liner:** A CLI + library that validates MCP tool schemas and catches documented n8n↔MCP schema defects before they silently break AI-agent tool calls.
-> **Status:** Narrowed MVP implementation, review fixes, documentation, sample reports, demo script, and CI are complete. The CLI, library, fixtures, and evaluation harness pass 136 tests and detect 15/15 seeded defects with 0 false positives, 0 unexpected findings, 0 misattributions, deterministic reports, and correct exit/error codes as of 2026-09-11. Recording the demo and publishing the repository remain.
+> **Status:** MVP complete and published. Implementation, review fixes, documentation, sample reports, an automated demo GIF, and CI are in place; the repository is public at https://github.com/schatten007/SchemaSentinel with a green workflow. The CLI, library, fixtures, and evaluation harness pass 136 tests and detect 15/15 seeded defects with 0 false positives, 0 unexpected findings, 0 misattributions, deterministic reports, and correct exit/error codes as of 2026-09-15. The only remaining Definition-of-Done item is the optional upstream n8n reproduction or PR.
 > On 2026-09-10 the Stage 5 review narrowed the contract to JSON Schema 2020-12 and local JSON Pointer `$ref` values, then the implementation was brought into alignment. See `SPEC.md` §1.2 and §3.5 for the rationale and supported boundary.
 > **Why first:** Smallest scope, produces reusable fixtures, and doubles as an upstream open-source contribution. Its outputs feed the Large project (AgentAnvil).
 
@@ -85,7 +85,7 @@ Implementation loop within stage 4: select one `SPEC.md` rule → add a failing 
 
 The corpus session must not read detector implementation. The implementation session must not tune rules against the full corpus. `SPEC.md` is their shared contract.
 
-Stage 5 followed the same split: the narrowing was specified independently, then implemented and reviewed in separate sessions. The narrowed implementation, regression fixes, documentation artifacts, and CI are complete; only recording the demo and publishing remain.
+Stage 5 followed the same split: the narrowing was specified independently, then implemented and reviewed in separate sessions. Implementation, regression fixes, documentation artifacts, the automated demo, and CI are complete and published. The demo is regenerable via `scripts/generate-demo-cast.mjs` (cast) rendered with `agg` to `docs/demo.gif`; `docs/demo-script.md` holds the narrated version. Only the optional upstream contribution in §10 remains.
 
 ## 14. Cross-references (verify claims here)
 - Primary project evidence: `PROJECT_EVIDENCE.md`

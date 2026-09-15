@@ -118,6 +118,14 @@ node dist/cli.js validate fixtures/valid/minimal-typed.json --format json --out 
 node dist/cli.js validate fixtures/valid/minimal-typed.json
 ```
 
+## Demo
+
+![SchemaSentinel CLI demo](docs/demo.gif)
+
+The same commands with narration are in [`docs/demo-script.md`](docs/demo-script.md).
+The demo is reproducible: `node scripts/generate-demo-cast.mjs` records the
+real CLI outputs into `docs/demo.cast`, which is rendered to `docs/demo.gif`.
+
 ## Supported input
 
 The CLI accepts one UTF-8 JSON file in any of these shapes and normalizes it to
